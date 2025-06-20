@@ -1,0 +1,458 @@
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: #2D3436;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Brand/Logo Section */
+.brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.brand-link {
+  text-decoration: none;
+  color: #ECF0F1;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  font-weight: bold;
+  font-size: 24px;
+  color: #ECF0F1;
+  margin-right: 8px;
+  background-color: #5D6D7E;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ECF0F1;
+}
+
+@media (min-width: 768px) {
+  .logo-text {
+    display: inline;
+  }
+}
+
+/* Search Section */
+.search-container {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.search-container form {
+  display: flex;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.search-container form:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.search-container form:focus-within {
+  box-shadow: 0 6px 25px rgba(93, 109, 126, 0.3);
+  transform: translateY(-2px);
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 20px 15px 50px;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 400;
+  background: transparent;
+  color: #2C3E50;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #7f8c8d;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.search-input:focus {
+  outline: none;
+  color: #2C3E50;
+}
+
+.search-input:focus::placeholder {
+  opacity: 0.5;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+
+.search-button {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #7f8c8d;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.search-button:hover {
+  color: #FF6F00;
+  background-color: rgba(255, 111, 0, 0.1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.search-container form:focus-within .search-button {
+  color: #FF6F00;
+}
+
+.search-icon {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Add a subtle search icon animation */
+@keyframes search-pulse {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.05);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.search-container form:focus-within .search-button {
+  animation: search-pulse 2s infinite;
+}
+
+/* Actions Section (Cart and Auth) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Cart */
+.cart-container {
+  margin-right: 20px;
+  position: relative;
+}
+
+.cart-link {
+  text-decoration: none;
+}
+
+.cart-button {
+  background: transparent;
+  font-size: 24px;
+  position: relative;
+  cursor: pointer;
+  color: #ECF0F1;
+  transition: color 0.2s;
+}
+
+.cart-button:hover {
+  color: #FF6F00;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.cart-icon {
+  font-size: 1.3rem;
+  font-style: normal;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #FF6F00;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: badge-appear 0.3s ease-out;
+}
+
+@keyframes badge-appear {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Auth */
+.auth-container {
+  display: flex;
+  align-items: center;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.username {
+  font-weight: 600;
+  color: #ECF0F1;
+}
+
+.signout-button {
+  background-color: #5D6D7E;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.signout-button:hover {
+  background-color: #34495E;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-button, .signup-button {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.login-button {
+  background-color: transparent;
+  color: #ECF0F1;
+  border: 1px solid #5D6D7E;
+}
+
+.login-button:hover {
+  background-color: rgba(93, 109, 126, 0.2);
+}
+
+.signup-button {
+  background-color: #5D6D7E;
+  color: white;
+  border: 1px solid #5D6D7E;
+}
+
+.signup-button:hover {
+  background-color: #34495E;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  .search-container {
+    order: 3;
+    margin: 15px 0 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .search-container form {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  }
+  
+  .search-input {
+    padding: 12px 15px 12px 45px;
+    font-size: 14px;
+  }
+  
+  .search-button {
+    left: 12px;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .search-icon {
+    font-size: 14px;
+  }
+  
+  .brand-container, .nav-actions {
+    width: auto;
+  }
+  
+  .logo-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-container, .nav-actions {
+    width: 50%;
+  }
+  
+  .search-container {
+    margin: 12px 0 0;
+  }
+  
+  .search-input {
+    padding: 10px 12px 10px 40px;
+    font-size: 13px;
+  }
+  
+  .search-button {
+    left: 10px;
+    width: 22px;
+    height: 22px;
+  }
+  
+  .search-icon {
+    font-size: 12px;
+  }
+  
+  .login-button, .signup-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .logo-icon {
+    font-size: 20px;
+    padding: 6px;
+  }
+  
+  .logo-text {
+    display: none;
+  }
+}
+
+.categories-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #34495E; /* Updated to slate gray */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.navbar-right .cart-icon {
+  color: white;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #5D6D7E; /* Updated to medium gray */
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.login-btn, .signup-btn {
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.login-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.login-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.signup-btn {
+  background-color: #5D6D7E; /* Updated to medium gray */
+  color: white;
+}
+
+.signup-btn:hover {
+  background-color: #34495E; /* Updated to slate gray */
+}
+
+/* Cart Animation */
+.cart-animate {
+  animation: cart-pulse 0.8s ease;
+}
+
+@keyframes cart-pulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+    color: #FF6F00;
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+    color: #FF6F00;
+  }
+  100% {
+    transform: scale(1);
+  }
+} 

@@ -1,0 +1,267 @@
+.payment-options-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.payment-options-container h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #2F3E46;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.payment-method:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.payment-method.selected {
+  border-color: #2F3E46;
+  background-color: #f5f8fa;
+}
+
+.payment-method-icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  width: 30px;
+  text-align: center;
+}
+
+.payment-method-details {
+  flex: 1;
+}
+
+.payment-method-details h4 {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.payment-method-details p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.payment-method-radio {
+  margin-left: auto;
+}
+
+.card-details {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.cod-notice {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff9e6;
+  border-radius: 4px;
+  border-left: 3px solid #FFD166;
+}
+
+.cod-notice p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.form-group .input-error {
+  border-color: #e74c3c;
+  background-color: #fff8f8;
+}
+
+.form-group .error-message {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.card-validation-summary {
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #fff1f0;
+  border: 1px solid #ff4d4f;
+  border-radius: 4px;
+  color: #ff4d4f;
+}
+
+.card-validation-summary ul {
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.card-validation-summary li {
+  margin-bottom: 4px;
+}
+
+.validate-card-button {
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.validate-card-button:hover {
+  background-color: #096dd9;
+}
+
+.validate-card-button:active {
+  background-color: #0050b3;
+}
+
+.validation-success {
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+  border-radius: 4px;
+  color: #52c41a;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.success-icon {
+  font-size: 18px;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.input-error {
+  border: 1px solid #ff4d4f !important;
+  background-color: #fff1f0;
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+  animation: error-pulse 1.5s ease-in-out;
+}
+
+@keyframes error-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 4px rgba(255, 77, 79, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0);
+  }
+}
+
+.error-message {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.error-message::before {
+  content: "⚠️";
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.input-with-hint {
+  position: relative;
+}
+
+.input-hint {
+  display: none;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2D3E4F;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.input-hint::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #2D3E4F transparent transparent transparent;
+}
+
+.input-with-hint input:focus + .input-hint {
+  display: block;
+}
+
+/* Show the hint when the input has an error */
+.input-with-hint .input-error + .input-hint {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+} 

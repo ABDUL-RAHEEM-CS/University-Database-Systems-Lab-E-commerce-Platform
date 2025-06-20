@@ -1,0 +1,85 @@
+.wishlist-button {
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.wishlist-button.small {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.wishlist-button.medium {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+}
+
+.wishlist-button.large {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+}
+
+.wishlist-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.wishlist-button:active {
+  transform: scale(0.95);
+}
+
+.wishlist-button .heart-icon {
+  color: #e74c3c;
+  transition: transform 0.3s ease, color 0.3s ease;
+  line-height: 1;
+}
+
+.wishlist-button:not(.in-wishlist) .heart-icon {
+  color: #2F3E46;
+}
+
+.wishlist-button.in-wishlist .heart-icon {
+  transform: scale(1.1);
+  animation: pulse 0.3s ease;
+}
+
+.wishlist-button.loading {
+  cursor: wait;
+}
+
+.wishlist-button .loading-indicator {
+  animation: rotate 1s linear infinite;
+  color: #2F3E46;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 

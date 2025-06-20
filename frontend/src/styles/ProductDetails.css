@@ -1,0 +1,348 @@
+/* Product Details - Clean & Simple Design */
+
+.product-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  background: #f8f9fa;
+  min-height: calc(100vh - 100px);
+}
+
+.product-details-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+/* Image Section */
+.product-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.product-detail-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  max-width: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Product Info Section */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Price Section */
+.product-price {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.current-price {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.currency {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #106970;
+}
+
+.amount {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #106970;
+}
+
+.original-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.strike-through {
+  text-decoration: line-through;
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.discount-badge {
+  background: #dc3545;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* Description Section */
+.product-description {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.product-description h3 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.product-description p {
+  color: #495057;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Quantity Control */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.quantity-label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  overflow: hidden;
+}
+
+.product-details-container .quantity-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #106970 !important;
+  color: white !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-details-container .quantity-btn:hover {
+  background: #0a5a62 !important;
+}
+
+/* Ensure buttons have proper styling with higher specificity */
+.product-details-container .quantity-selector .quantity-btn {
+  background: #106970 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.product-details-container .quantity-selector .quantity-btn:hover {
+  background: #0a5a62 !important;
+  color: white !important;
+}
+
+.quantity-display {
+  min-width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  padding: 0 15px;
+  background: white;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Purchase Section */
+.purchase-section {
+  margin-top: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-add-to-cart {
+  background: #106970;
+  color: white;
+}
+
+.btn-add-to-cart:hover {
+  background: #0a5a62;
+  transform: translateY(-1px);
+}
+
+.btn-buy-now {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-buy-now:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.cart-icon, .buy-icon {
+  font-size: 1rem;
+}
+
+/* Product Not Found */
+.product-not-found {
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 8px;
+  margin: 40px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.back-button {
+  background: #106970;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 15px;
+}
+
+.back-button:hover {
+  background: #0a5a62;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-details-container {
+    padding: 15px;
+  }
+  
+  .product-details-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 20px;
+  }
+  
+  .product-title {
+    font-size: 1.6rem;
+  }
+  
+  .amount {
+    font-size: 1.8rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .quantity-control {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .quantity-selector {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-details-container {
+    padding: 10px;
+  }
+  
+  .product-details-content {
+    padding: 15px;
+  }
+  
+  .product-title {
+    font-size: 1.4rem;
+  }
+  
+  .amount {
+    font-size: 1.6rem;
+  }
+  
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .product-details-container .quantity-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+    background: #106970 !important;
+    color: white !important;
+  }
+  
+  .quantity-display {
+    min-width: 40px;
+    height: 32px;
+    padding: 0 10px;
+  }
+} 

@@ -1,0 +1,129 @@
+.home-rating-display {
+  margin: 8px 15px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.home-rating-stars {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.home-star-container {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.home-star-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #e0e0e0;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.home-star-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FFD700;
+  font-size: 18px;
+  line-height: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.home-rating-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.home-rating-number {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.home-review-count {
+  color: #6c757d;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #f8f9fa;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-rating-display {
+    margin: 6px 12px 8px;
+    gap: 4px;
+  }
+  
+  .home-star-container {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .home-star-bg,
+  .home-star-fill {
+    font-size: 16px;
+  }
+  
+  .home-rating-number {
+    font-size: 14px;
+  }
+  
+  .home-review-count {
+    font-size: 12px;
+    padding: 1px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-rating-display {
+    margin: 4px 10px 6px;
+  }
+  
+  .home-star-container {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .home-star-bg,
+  .home-star-fill {
+    font-size: 14px;
+  }
+  
+  .home-rating-number {
+    font-size: 13px;
+  }
+  
+  .home-review-count {
+    font-size: 11px;
+  }
+}
+
+/* Hover effects for better interactivity */
+.complete_product:hover .home-star-fill {
+  color: #FFC107;
+  transform: scale(1.05);
+}
+
+.complete_product:hover .home-rating-number {
+  color: #1a252f;
+}
+
+.complete_product:hover .home-review-count {
+  background-color: #e3f2fd;
+  border-color: #bbdefb;
+} 
