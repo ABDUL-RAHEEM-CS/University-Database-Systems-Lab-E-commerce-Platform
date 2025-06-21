@@ -25,7 +25,7 @@ A full-stack e-commerce application built with React.js and Node.js, featuring a
 ### Prerequisites
 - Node.js (v14 or later)
 - Microsoft SQL Server
-- npm or yarn
+- npm
 
 ### Setup
 
